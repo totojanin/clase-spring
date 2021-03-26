@@ -1,16 +1,7 @@
-package com.ejerciciospring.numerosromanos.entities;
+package com.ejerciciospring.numerosromanos.services;
 
-import lombok.Data;
-
-@Data
-public class NumeroRomano {
-    private long identificador;
-    private int numeroNatural;
-    private String numeroRomano;
-
-    public String convertirANumeroRomano() {
-        int num = this.numeroNatural;
-
+public class RomanosService {
+    public static String convertirANumeroRomano(int num) {
         int[] values = { 1000,900,500,400,100,90,50,40,10,9,5,4,1 };
         String[] romanLiterals = { "M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I" };
 

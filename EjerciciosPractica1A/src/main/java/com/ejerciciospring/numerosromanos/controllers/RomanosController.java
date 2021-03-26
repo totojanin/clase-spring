@@ -1,6 +1,7 @@
 package com.ejerciciospring.numerosromanos.controllers;
 
 import com.ejerciciospring.numerosromanos.entities.NumeroRomano;
+import com.ejerciciospring.numerosromanos.services.RomanosService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +18,7 @@ public class RomanosController {
 
         nr.setIdentificador(contador.incrementAndGet());
         nr.setNumeroNatural(numero);
-        nr.setNumeroRomano(nr.convertirANumeroRomano());
+        nr.setNumeroRomano(RomanosService.convertirANumeroRomano(nr.getNumeroNatural()));
 
         return nr;
     }
