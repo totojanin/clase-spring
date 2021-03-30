@@ -12,9 +12,9 @@
 	<artifactId>diploma</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>diploma</name>
-	<description>API para generar diploma a partir de notas de un alumno</description>
+	<description>API para generacion de diplomas</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

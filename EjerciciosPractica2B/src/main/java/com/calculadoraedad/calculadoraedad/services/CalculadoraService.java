@@ -12,7 +12,7 @@ public class CalculadoraService {
 
             edad = Period.between(date, LocalDate.now());
 
-            return edad.toString();
+            return String.valueOf(edad.getYears());
         }
         catch (Exception e) {
             return "0";
