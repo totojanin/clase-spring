@@ -5,8 +5,6 @@ import com.metroscuadrados.metroscuadrados.entities.CasaDTO;
 import com.metroscuadrados.metroscuadrados.services.CasaService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.concurrent.atomic.AtomicLong;
-
 @RestController
 public class CasaController {
     @PostMapping("/calcularMetrosCuadrados")
