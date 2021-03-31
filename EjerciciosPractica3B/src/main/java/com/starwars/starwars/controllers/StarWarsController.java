@@ -15,8 +15,8 @@ public class StarWarsController {
     @Autowired
     private StarWarsService starWarsService;
 
-    @PostMapping("/calcularCaloriasPlato/{name}")
-    public List<PersonajeDTO> calcularCaloriasPlato(@PathVariable String name) {
+    @PostMapping("/buscarPersonaje/{name}")
+    public List<PersonajeDTO> buscarPersonaje(@PathVariable String name) {
         return starWarsService.buscarPersonaje(name);
     }
 }

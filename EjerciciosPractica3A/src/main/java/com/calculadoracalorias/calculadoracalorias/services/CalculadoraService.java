@@ -8,7 +8,8 @@ import com.calculadoracalorias.calculadoracalorias.dto.ResponseDTO;
 import java.util.List;
 
 public interface CalculadoraService {
-    ResponseDTO crearResponse(PlatoDTO plato);
+    ResponseDTO crearResponsePlato(PlatoDTO plato);
+    List<ResponseDTO> crearResponsePlatos(List<PlatoDTO> platos);
     int caloriasTotales(PlatoDTO plato);
     List<IngredienteCaloriasDTO> caloriasPorIngrediente(List<IngredienteDTO> ingredientes);
     IngredienteCaloriasDTO ingredienteMaxCalorias(List<IngredienteDTO> ingredientes);

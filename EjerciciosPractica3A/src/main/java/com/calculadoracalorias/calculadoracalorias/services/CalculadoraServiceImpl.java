@@ -17,7 +17,7 @@ public class CalculadoraServiceImpl implements CalculadoraService {
     private CalculadoraRepository calculadoraRepository;
 
     @Override
-    public ResponseDTO crearResponse(PlatoDTO plato) {
+    public ResponseDTO crearResponsePlato(PlatoDTO plato) {
         ResponseDTO response = new ResponseDTO();
 
         response.setCaloriasTotalPlato(caloriasTotales(plato));
@@ -25,6 +25,17 @@ public class CalculadoraServiceImpl implements CalculadoraService {
         response.setIngredienteMaxCalorias(ingredienteMaxCalorias(plato.getIngredientes()));
 
         return response;
+    }
+
+    @Override
+    public List<ResponseDTO> crearResponsePlatos(List<PlatoDTO> platos) {
+        List<ResponseDTO> responseList = new ArrayList<ResponseDTO>();
+
+        for (PlatoDTO plato : platos) {
+            responseList.add(crearResponsePlato(plato));
+        }
+
+        return responseList;
     }
 
     @Override
