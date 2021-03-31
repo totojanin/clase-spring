@@ -3,12 +3,9 @@ package com.practicaintegradora.redirectlinks.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.util.concurrent.atomic.AtomicLong;
-
 @Data
 @AllArgsConstructor
-public class LinkDTO {
-    private Long linkId;
+public class InvalidateDTO {
     private String url;
-    private String password;
+    private final String mensaje = "El link ha sido invalidado";
 }
